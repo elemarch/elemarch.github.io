@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Trade+Winds" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+</head>
+<body>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#but">Jouer au jeu</a></li>
+  <li><a data-toggle="tab" href="#ter">Le terrain</a></li>
+  <li><a data-toggle="tab" href="#car">Les cartes</a></li>
+  <li><a data-toggle="tab" href="#dec">Construire un deck</a></li>
+  <li><a data-toggle="tab" href="#glo">Lexique</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="but" class="tab-pane fade in active">
+    <h1>1. Mise en place</h1>
+    <p>Au moins deux adversaires s'affrontent en tant qu'alchimistes. Leur but : créer des potions avant leur adversaire. Chacun d'entre eux ramène son propre <a href="#" data-toggle="tooltip" title="ensemble de cartes qu'utilise un joueur lors de la partie">deck de cartes</a> (voir : Construire un Deck).</p>
+    <p>Les cartes potions et les cartes ingrédients sont mises dans des piles spéciales (respectivement appelées "Potions" et "Réserve"). Les piles ingrédients et la pile du reste des cartes (deck principal) sont mélangées chacune de leur côté et placées face verso.</p>
+    <p>La réserve est retournée face recto au dernier moment, la partie peut commencer.</p>
+    <h1>2. Déroulement d'un tour de jeu</h1>
+    <h2>A - Phase d'initialisation</h2>
+    <p>Les effets dits "Au début du tour" se déclenchent. Aucune <a href="#" data-toggle="tooltip" title="quand c'est le tour de votre adversaire, vous pouvez jouer une carte préparée à certains moments">réaction</a> ne peut être faite lors de cette phase. </p>
+    <div class="row">
+    	<div class="col col-sm-6">
+    		<h2>B1 - Phase d'action</h2>
+    		<p>Lors de sa phase d'action, l'alchimiste peut faire jusqu'à trois choses différentes :</p>
+    		<ul>
+    			<li>Piocher une carte de son deck principal (max 2)</li>
+    			<li>Cueillir (max 2)</li>
+    			<li>Jouer une carte de sa main (pas de maximum)</li>
+    			<li>Récupérer (max 2)</li>
+    		</ul>
+    		<p>Une <a href="#" data-toggle="tooltip" title="quand c'est le tour de votre adversaire, vous pouvez jouer une carte préparée à certains moments">réaction</a> peut être faite aux moments suivants : lors de la déclaration d'une action (lorsqu'une carte est jouée face recto, au moment ou la carte est révélée), lors de la résolution de cette action.
+    	</div>
+    	<div class="col col-sm-6">
+    		<h2>B2 - Phase de fabrication</h2>
+    		<p>L'alchimiste peut également renoncer à toutes ses actions au début du tour et commencer la fabrication d'une potion. Dans ce cas, il peut chaque tour choisir jusqu'à deux (trois ?) cartes de sa pile d'ingrédients correspondant à la recette de la potion qu'il souhaite fabriquer (dans n'importe quel ordre).</p>
+    		<p>Lorsque tous les ingrédients ont été choisis, ils sont mélangés à la partie face recto de la réserve, et l'alchimiste récupère la potion dans sa main. Au tour suivant, il pourra à nouveau choisir de faire une phase d'action normale, ou de repartir dans une phase de fabrication.</p>
+    		<p>Une <a href="#" data-toggle="tooltip" title="quand c'est le tour de votre adversaire, vous pouvez jouer une carte préparée à certains moments">réaction</a> peut être faite aux moments suivants : lorsqu'un ingrédient est choisi</p>
+    	</div>
+    </div>
+    <div class="row">
+    	<div class="col col-sm-6">
+    		<h2>Actions des créatures</h2>
+    		<p>Qu'il choisisse la phase d'action ou de fabrication, il peut également jouer l'action de chacune de ses créatures présentes sur la ligne de front. Chaque créature dispose d'une action et d'une seule, et peut :</p>
+    		<ul>
+    			<li>Attaquer</li>
+    			<li>Déclencher une capacité <i class="fa fa-sign-out" aria-hidden="true"></i>.</li>
+    		</ul>
+    		<p>Les actions de l'alchimiste et de ses créatures peuvent être effectuées dans n'importe quel ordre.</p>
+    	</div>
+    	<div class="col col-sm-6">
+    		<h2>Déroulement d'une attaque</h2>
+    		<p>Une attaque doit être portée sur une créature ou un alchimiste. Toutes les créatures en ligne de défenses doivent être éliminées avant de pouvoir atteindre l'alchimiste.</p>
+    		<p>Si l'attaque est portée sur une créature, la créature ayant l'attaque la plus basse est détruite. En cas de puissance égale, les deux créatures survivent.</p>
+    		<p>Si l'attaque est portée sur un alchimiste, l'alchimiste place l'ingrédient du dessus de sa réserve sous celle-ci, face verso.</p>
+    		<p>Une <a href="#" data-toggle="tooltip" title="quand c'est le tour de votre adversaire, vous pouvez jouer une carte préparée à certains moments">réaction</a> peut être effectuée aux moments suivants : Lors de la déclaration de l'attaque, lors de l'application des dégâts, lors de la destruction de la ou des cartes.</p>
+    	</div>
+    </div>
+    <h2>C - Phase de fin</h2>
+    <p>Les effets dits "A la fin du tour" se déclenchent. Aucune <a href="#" data-toggle="tooltip" title="quand c'est le tour de votre adversaire, vous pouvez jouer une carte préparée à certains moments">réaction</a> ne peut être faite lors de cette phase. </p>
+    <h1>3. Conditions de victoire</h1>
+    <p>Le premier alchimiste a avoir fabriqué et lancé toutes ses potions gagne la partie.</p>
+    <p>Si la <a href="#" data-toggle="tooltip" title="paquet de cartes contenant les ingrédients non récoltés">réserve</a> d'un alchimiste est vide, ou que tous les ingrédients y sont face verso, celui-ci perd la partie.</p>
+  </div>
+  <div id="ter" class="tab-pane fade in ">
+  	<table id="terrain">
+  		<tr>
+  			<td></td>
+  			<td class="deck"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></td>
+  			<td class="backline"><i class="fa fa-shield fa-fw" aria-hidden="true"></i></td>
+  			<td class="backline"><i class="fa fa-shield fa-fw" aria-hidden="true"></i></td>
+  			<td class="backline"><i class="fa fa-shield fa-fw" aria-hidden="true"></i></td>
+  			<td class="backline"><i class="fa fa-shield fa-fw" aria-hidden="true"></i></td>
+  			<td class="backline"><i class="fa fa-shield fa-fw" aria-hidden="true"></i></td>
+  			<td class="reserve"><i class="fa fa-archive fa-fw" aria-hidden="true"></i></td>
+  			<td></td>
+  		</tr>
+  		<tr>
+  			<td class="isolement"><i class="fa fa-times fa-fw" aria-hidden="true"></i></td>
+  			<td class="defausse"><i class="fa fa-trash fa-fw" aria-hidden="true"></i></td>
+  			<td class="frontline"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></td>
+  			<td class="frontline"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></td>
+  			<td class="frontline"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></td>
+  			<td class="frontline"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></td>
+  			<td class="frontline"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></td>
+  			<td class="ingredients"><i class="fa fa-leaf fa-fw" aria-hidden="true"></i></td>
+  			<td class="potions"><i class="fa fa-flask fa-fw" aria-hidden="true"></i></td>
+  		</tr>
+  		<tr>
+  			<td class="potions"><i class="fa fa-flask fa-fw" aria-hidden="true"></i></td>
+  			<td class="ingredients"><i class="fa fa-leaf fa-fw" aria-hidden="true"></i></td>
+  			<td class="frontline"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></td>
+  			<td class="frontline"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></td>
+  			<td class="frontline"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></td>
+  			<td class="frontline"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></td>
+  			<td class="frontline"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></td>
+  			<td class="defausse"><i class="fa fa-trash fa-fw" aria-hidden="true"></i></td>
+  			<td class="isolement"><i class="fa fa-times fa-fw" aria-hidden="true"></i></td>
+  		</tr>
+  		<tr>
+  			<td></td>
+  			<td class="reserve"><i class="fa fa-archive fa-fw" aria-hidden="true"></i></td>
+  			<td class="backline"><i class="fa fa-shield fa-fw" aria-hidden="true"></i></td>
+  			<td class="backline"><i class="fa fa-shield fa-fw" aria-hidden="true"></i></td>
+  			<td class="backline"><i class="fa fa-shield fa-fw" aria-hidden="true"></i></td>
+  			<td class="backline"><i class="fa fa-shield fa-fw" aria-hidden="true"></i></td>
+  			<td class="backline"><i class="fa fa-shield fa-fw" aria-hidden="true"></i></td>
+  			<td class="deck"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></td>
+  			<td></td>
+  		</tr>
+  	</table>
+    <h1>Présentation</h1>
+    <h2><i class="fa fa-bolt fa-fw" aria-hidden="true"></i>Ligne de front</h2>
+    Des créatures peuvent être posées sur ces cinq zones. Celles-ci peuvent attaquer chaque tour ou déclencher une capacité <i class="fa fa-sign-out" aria-hidden="true"></i>. Le texte des cartes prend effet sur ces zones, une seule carte créature par zone.
+    <h2><i class="fa fa-shield fa-fw" aria-hidden="true"></i>Ligne de Défense</h2>
+    Des créatures peuvent être posées sur ces cinq zones. Celles-ci ne peuvent pas attaquer ni déclencher une capacité <i class="fa fa-sign-out" aria-hidden="true"></i>, mais doivent être attaquée avant l'alchimiste. Le texte des cartes prend effet sur ces zones, une seule carte créature par zone.
+    <h2><i class="fa fa-bars fa-fw" aria-hidden="true"></i>Deck principal</h2>
+    Paquet de cartes face verso, mélangées. Contient les sorts, les créatures et les objets.
+    <h2><i class="fa fa-trash fa-fw" aria-hidden="true"></i>Défausse</h2>
+    Lorsqu'une créature meurt ou qu'elle est dite "défaussée", elle rejoint cette pile, face recto. Celle pile peut être consultée par n'importe qui, n'importe quand, et ordonnée comme bon lui semble par l'alchimiste.
+    <h2><i class="fa fa-times fa-fw" aria-hidden="true"></i>Isolement</h2>
+    Certaines cartes ont pour effet d'isoler une carte. C'est dans cette pile qu'elle est ajoutée, face recto. Celle pile peut être consultée par n'importe qui, n'importe quand, et ordonnée comme bon lui semble par l'alchimiste.
+    <h2><i class="fa fa-archive fa-fw" aria-hidden="true"></i>Réserve</h2>
+    La réserve est le Deck d'ingrédients. Au premier tour de l'alchimiste, il est retourné face recto. L'effet de la carte du dessus prend effet immédiatement.
+    <h2><i class="fa fa-leaf fa-fw" aria-hidden="true"></i>Ingrédients</h2>
+    Les ingrédients récoltés, de laquelle les ingrédients peuvent être choisis pour fabriquer une potion. Celle pile peut être consultée par n'importe qui, n'importe quand, et ordonnée comme bon lui semble par l'alchimiste.
+    <h2><i class="fa fa-flask fa-fw" aria-hidden="true"></i>Potions</h2>
+    Pile de potions, face verso. Celle pile peut être consultée par l'alchimiste n'importe quand, et ordonnée comme bon lui semble.
+  </div>
+  <div id="car" class="tab-pane fade in ">
+    <h1>Généralités</h1>
+    <p>Il existe cinq catégories de cartes différentes dans le jeu. Toutes ont :</p>
+    <ul>
+    	<li>Un nom qui identifie la carte</li>
+    	<li>Un type qui identifie le rôle de la carte</li>
+    	<li>Une couleur qui identifie leur catégorie, bien que le type suffise</li>
+    </ul>
+    <h1>Les cartes potions</h1>
+    <h1>Les cartes ingrédients</h1>
+    <h1>Les cartes créatures</h1>
+    <h1>Les cartes objets</h1>
+    <h1>Les cartes sorts</h1>
+  </div>
+  <div id="dec" class="tab-pane fade in ">
+    <h3>HOME</h3>
+    <p>tetx</p>
+  </div>
+  <div id="glo" class="tab-pane fade in ">
+  	<ul class="lexique">
+	    <li><span class="keyword">Défenseur</span> : Les créatures ayant le mot-clé défenseur doivent être posées sur la ligne de défense, mais peuvent déclencher leur capacité <i class="fa fa-sign-out" aria-hidden="true"></i>.</li>
+	    <li><span class="keyword">Portée X</span> : Les créatures ayant le mot-clé portée x peuvent attaquer à la puissance x depuis la ligne de défense.</li>
+	</ul>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+</body>
+</html>
