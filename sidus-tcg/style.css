@@ -55,3 +55,7 @@ td.deck        { background: #A8A8A8; }
 	width: 190px;
 	float: left;
 }
+
+.keyword {
+	font-weight: 500;
+}
