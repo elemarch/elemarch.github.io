@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="row">
+    <div class="col col-sm-6 box box-src" id="box-src">
+        <div class="src-cell">
+            <button onclick='increment("white")' class="ico-src" id="white-ico"></button>
+            <div class="progress">
+                <div id="white" class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    0
+                </div>
+            </div>
+        </div>
+        <div class="src-cell">
+            <button onclick='increment("blue")' class="ico-src" id="blue-ico"></button>
+            <div class="progress">
+                <div id="blue" class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    0
+                </div>
+            </div>
+        </div>
+        <div class="src-cell">
+            <button onclick='increment("black")' class="ico-src" id="black-ico"></button>
+            <div class="progress">
+                <div id="black" class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    0
+                </div>
+            </div>
+        </div>
+        <div class="src-cell">
+            <button onclick='increment("red")' class="ico-src" id="red-ico"></button>
+            <div class="progress">
+                <div id="red" class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    0
+                </div>
+            </div>
+        </div>
+        <div class="src-cell">
+            <button onclick='increment("green")' class="ico-src" id="green-ico"></button>
+            <div class="progress">
+                <div id="green" class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    0
+                </div>
+            </div>
+        </div>
+        <div class="src-cell">
+            <button onclick='increment("neutral")' class="ico-src" id="neutral-ico"></button>
+            <div class="progress">
+                <div id="neutral" class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    0
+                </div>
+            </div>
+        </div>
+        <h1>Baselands</h1>
+
+        <ul>
+            <li><button onclick='addLand("plains", 1)'>+1</button>
+                Plains (<img src="pictures/_0001_white.png" class="small-icon">) : <span id="plains_qtt">0</span></li>
+            <li><button onclick='addLand("plains", 1)'>+1</button>
+                Island (<img src="pictures/_0005_blue.png" class="small-icon">) : <span id="plains_qtt">0</span></li>
+            <li><button onclick='addLand("plains", 1)'>+1</button>
+                Swamp (<img src="pictures/_0004_black.png" class="small-icon">) : <span id="plains_qtt">0</span></li>
+            <li><button onclick='addLand("plains", 1)'>+1</button>
+                Mountains (<img src="pictures/_0003_red.png" class="small-icon">) : <span id="plains_qtt">0</span></li>
+            <li><button onclick='addLand("plains", 1)'>+1</button>
+                Forest (<img src="pictures/_0002_green.png" class="small-icon">) : <span id="plains_qtt">0</span></li>
+        </ul>
+    </div>
+    <div class="col col-sm-6 box box-log">
+        <ul>
+            <li id="0">Bienvenue !</li>
+        </ul>
+    </div>
+
+</div>
+
+
+<script src="scripts/main.js"></script>
+
+</body>
+</html>

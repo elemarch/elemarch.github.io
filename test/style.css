@@ -1,0 +1,66 @@
+body {
+    padding: 5px;
+}
+
+.count {
+    color: red;
+}
+
+.ico-src {
+    height: 31px;
+    width: 31px;
+    border: none;
+    background-size: contain;
+    background-color: transparent;
+}
+
+.src-cell {
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+}
+
+#white-ico {    background-image: url(pictures/_0001_white.png);}
+#white {
+    background-color: #f8f6da;
+    color: black;
+}
+
+#blue-ico {    background-image: url(pictures/_0005_blue.png);}
+#blue {
+    background-color: #bcd9e8;
+    color: black;
+}
+
+#black-ico {    background-image: url(pictures/_0004_black.png);}
+#black {
+    background-color: #c2b6ae;
+    color: black;
+}
+
+#red-ico {    background-image: url(pictures/_0003_red.png);}
+#red {
+    background-color: #f8a176;
+    color: black;
+}
+
+#green-ico {    background-image: url(pictures/_0002_green.png);}
+#green {
+    background-color: #9cc496;
+    color: black;
+}
+
+#neutral-ico {    background-image: url(pictures/_0000_neutral.png);}
+#neutral {
+    background-color: #d0cac3;
+    color: black;
+}
+
+
+#leaf-ico {
+    background-image: url('pictures/ressources/leaf.png');
+}
+
+.small-icon {
+    height: 20px;
+}
