@@ -1,3 +1,20 @@
-h2 {
+body {
+    font-family: "Neuton", serif;
+    font-size: 18px;
+}
+h2, h3 {
     font-family: 'Almendra Display', cursive;
+    text-align: center;
+}
+
+h2 {
+    background-color: white;
+    font-weight: 900;
+    color: #c1a196;
+}
+
+div#identity_panel {
+    background: #c1a196;
+    /* padding: 10px; */
+    border-radius: 10px;
 }
