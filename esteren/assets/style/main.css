@@ -1,6 +1,7 @@
 body {
     font-family: "Neuton", serif;
     font-size: 18px;
+    background-image: url("../../assets/pictures/_background.png");
 }
 h2, h3 {
     font-family: 'Almendra Display', cursive;
@@ -19,17 +20,16 @@ div#identity_panel {
     border-radius: 10px;
 }
 
-ul.row.facts_list {
+ul {
     padding: 0px;
     margin-left: 0px;
 }
 
-ul.facts_list li {
+li {
     list-style: none;
     background-color: #c1a196;
     border-radius: 10px;
     padding-left: 10px;
-    border-bottom: 5px solid #c1a196;
     margin: 5px 0;
 }
 
@@ -42,8 +42,8 @@ div.fact {
 }
 
 li {
-    border: 3px solid #805c4f;
-    border-bottom: none;
+    border: 3px solid #c1bdac;
+    border-bottom: 5px solid #c1a196;
     margin-bottom: 10px;
 }
 
@@ -60,18 +60,11 @@ ul.info_list li {
 }
 
 span.mini_fact_name {
-    display: block;
     text-align: center;
     font-style: italic;
-    background-color: #c1a196;
-    width: 100%;
     /* color: wheat; */
 }
 
-span.mini_fact {
-    display: block;
-    font-size: 15px;
-    background-color: wheat;
-    text-align: center;
-    border: 6px solid #c1a196;
+ul.row.facts_list {
+    margin-left: 0px;
 }
