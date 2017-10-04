@@ -35,8 +35,43 @@ ul.facts_list li {
 
 div.fact {
     margin: 5px 5px 0 -4px;
-    background-color: bisque;
+    background-color: wheat;
     padding: 10px;
     border-radius: 0 0 6px 6px;
     text-align: justify;
+}
+
+li {
+    border: 3px solid #805c4f;
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+ul.info_list {
+    padding: 0;
+}
+
+ul.info_list li {
+    list-style: none;
+}
+
+span.mini_fact_name {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    background-color: #c1a196;
+    width: 100%;
+    /* color: wheat; */
+}
+
+span.mini_fact {
+    display: block;
+    font-size: 15px;
+    background-color: wheat;
+    text-align: center;
+    border: 6px solid #c1a196;
 }
