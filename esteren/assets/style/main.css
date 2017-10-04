@@ -18,3 +18,25 @@ div#identity_panel {
     /* padding: 10px; */
     border-radius: 10px;
 }
+
+ul.row.facts_list {
+    padding: 0px;
+    margin-left: 0px;
+}
+
+ul.facts_list li {
+    list-style: none;
+    background-color: #c1a196;
+    border-radius: 10px;
+    padding-left: 10px;
+    border-bottom: 5px solid #c1a196;
+    margin: 5px 0;
+}
+
+div.fact {
+    margin: 5px 5px 0 -4px;
+    background-color: bisque;
+    padding: 10px;
+    border-radius: 0 0 6px 6px;
+    text-align: justify;
+}
