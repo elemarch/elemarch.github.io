@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Almendra+Display|Neuton:200,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../assets/style/main.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="col-md-2" id="identity_panel">
+        <div id="photo"></div>
+        <div id="resume">
+            <h2>Name</h2>
+            <h3>Title of character</h3>
+            <img src="portraits/default.png">
+            <p class="description meeting">Vestibulum porta quis sem ac laoreet. Aliquam consequat, risus non iaculis volutpat, nibh nisl placerat metus, vitae porttitor massa tortor eget ligula. Donec laoreet pulvinar sodales. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla consectetur pharetra turpis, at dapibus orci euismod sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Aliquam non sodales libero, non porta ante. Suspendisse pulvinar scelerisque diam eget vehicula. Sed risus odio, sollicitudin a luctus a, facilisis ultricies enim.</p>
+
+            <h3>Petits détails</h3>
+            <ul class="info_list">
+                <li>
+                    <span class="mini_fact_name">Vu pour la dernière fois</span>
+                    <span class="mini_fact" Le 00 mois 000 à Sanctuaire, port-Ouestern</li>
+                <li><span>Habite à</span> Sanctuaire, port-Ouestern</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-10" id="information_panels">
+        <div class="row">
+            <div class="col-md-6 description physical">
+                <h3>Description physique</h3>
+                <p>
+                Etiam id magna et ligula ultricies dapibus et sed lectus. Suspendisse ac erat dignissim, tempor ex ut, tincidunt enim. In hac habitasse platea dictumst. Nam tempus tortor a mollis laoreet. Etiam vestibulum ultrices accumsan. In condimentum nisi eu nisl tempus tincidunt. In in mauris sagittis, facilisis dolor eu, vestibulum metus. Phasellus sagittis dignissim justo, nec vulputate lectus malesuada ac. Proin nulla dui, maximus vel nisl eu, suscipit ornare dui. Quisque id sodales massa, a pharetra sem. Vivamus blandit urna nunc. Proin hendrerit erat quis tortor consequat, eu lobortis libero viverra.
+                </p>
+            </div>
+            <div class="col-md-6 description mental">
+                <h3>Description morale</h3>
+                <p>
+                Quisque sed est a mauris feugiat laoreet. Praesent lacinia suscipit metus, non auctor mauris ullamcorper ut. Aenean tempus neque sed lorem semper, quis commodo sapien consectetur. Donec vel lectus viverra, pharetra dolor sed, commodo lectus. Phasellus ut eleifend mi. Pellentesque posuere quam eu aliquam luctus. Ut eget sollicitudin tellus. Proin vestibulum vel augue a sollicitudin. Etiam porta nisi quis ligula fringilla, sit amet tristique tellus facilisis. Integer lacinia, sapien eu pharetra semper, sem neque feugiat diam, nec dignissim mi lacus ut nunc.
+                </p>
+            </div>
+        </div>
+        <h3>Détails connus</h3>
+        <ul class="row facts_list">
+            <li>
+                <span type="button"
+                      class="btn btn-default btn-xs"
+                      data-toggle="collapse"
+                      data-target="#fact_content">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </span>
+                <span>fact name</span>
+                <div id="fact_content" class="collapse fact">Mauris commodo sed lacus sed vehicula. Quisque metus dui, maximus nec neque quis, cursus fringilla enim. Nullam fermentum enim nibh, sit amet tempus neque tincidunt et. Maecenas lectus enim, aliquam ac elit et, imperdiet accumsan libero. Suspendisse eu mi a elit volutpat posuere. Nunc non dui et purus fringilla elementum ut auctor urna. Etiam molestie ligula et velit gravida, eleifend egestas sapien tristique. Duis tempus justo est, ut tempor lectus malesuada quis.</div>
+            </li>
+            <li>
+                <span type="button"
+                      class="btn btn-default btn-xs"
+                      data-toggle="collapse"
+                      data-target="#fact_content2">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </span>
+                <span>fact name</span>
+                <div id="fact_content2" class="collapse fact">Mauris commodo sed lacus sed vehicula. Quisque metus dui, maximus nec neque quis, cursus fringilla enim. Nullam fermentum enim nibh, sit amet tempus neque tincidunt et. Maecenas lectus enim, aliquam ac elit et, imperdiet accumsan libero. Suspendisse eu mi a elit volutpat posuere. Nunc non dui et purus fringilla elementum ut auctor urna. Etiam molestie ligula et velit gravida, eleifend egestas sapien tristique. Duis tempus justo est, ut tempor lectus malesuada quis.</div>
+            </li>
+            <li>
+                <span type="button"
+                      class="btn btn-default btn-xs"
+                      data-toggle="collapse"
+                      data-target="#fact_content3">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </span>
+                <span>fact name</span>
+                <div id="fact_content3" class="collapse fact">Mauris commodo sed lacus sed vehicula. Quisque metus dui, maximus nec neque quis, cursus fringilla enim. Nullam fermentum enim nibh, sit amet tempus neque tincidunt et. Maecenas lectus enim, aliquam ac elit et, imperdiet accumsan libero. Suspendisse eu mi a elit volutpat posuere. Nunc non dui et purus fringilla elementum ut auctor urna. Etiam molestie ligula et velit gravida, eleifend egestas sapien tristique. Duis tempus justo est, ut tempor lectus malesuada quis.</div>
+            </li>
+        </ul>
+        </div>
+    </div>
+</div>
+
+<footer class="container-fluid">
+    <p>Footer Text</p>
+</footer>
+</body>
+</html>
