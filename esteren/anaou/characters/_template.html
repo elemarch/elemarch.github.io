@@ -9,12 +9,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="../../assets/style/main.css">
     <title>Title</title>
 </head>
 <body>
 <div class="container-fluid">
-    <div class="col-md-4" id="identity_panel">
+    <div class="col-md-2" id="identity_panel">
         <div id="photo"></div>
         <div id="resume">
             <h2>Name</h2>
@@ -29,7 +29,7 @@
             </ul>
         </div>
     </div>
-    <div class="col-md-8" id="information_panels">
+    <div class="col-md-10" id="information_panels">
         <div class="row">
             <div class="col-md-6 description physical">
                 <h3>Description physique</h3>
@@ -44,11 +44,37 @@
                 </p>
             </div>
         </div>
+        <h3>Détails connus</h3>
         <ul class="row facts_list">
-            <h3>Détails connus</h3>
             <li>
-                <span>fact name</span><button class="button" data-toggle="collapse" data-target="#fact_content">+</button>
+                <span type="button"
+                      class="btn btn-default btn-xs"
+                      data-toggle="collapse"
+                      data-target="#fact_content">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </span>
+                <span>fact name</span>
                 <div id="fact_content" class="collapse fact">Mauris commodo sed lacus sed vehicula. Quisque metus dui, maximus nec neque quis, cursus fringilla enim. Nullam fermentum enim nibh, sit amet tempus neque tincidunt et. Maecenas lectus enim, aliquam ac elit et, imperdiet accumsan libero. Suspendisse eu mi a elit volutpat posuere. Nunc non dui et purus fringilla elementum ut auctor urna. Etiam molestie ligula et velit gravida, eleifend egestas sapien tristique. Duis tempus justo est, ut tempor lectus malesuada quis.</div>
+            </li>
+            <li>
+                <span type="button"
+                      class="btn btn-default btn-xs"
+                      data-toggle="collapse"
+                      data-target="#fact_content2">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </span>
+                <span>fact name</span>
+                <div id="fact_content2" class="collapse fact">Mauris commodo sed lacus sed vehicula. Quisque metus dui, maximus nec neque quis, cursus fringilla enim. Nullam fermentum enim nibh, sit amet tempus neque tincidunt et. Maecenas lectus enim, aliquam ac elit et, imperdiet accumsan libero. Suspendisse eu mi a elit volutpat posuere. Nunc non dui et purus fringilla elementum ut auctor urna. Etiam molestie ligula et velit gravida, eleifend egestas sapien tristique. Duis tempus justo est, ut tempor lectus malesuada quis.</div>
+            </li>
+            <li>
+                <span type="button"
+                      class="btn btn-default btn-xs"
+                      data-toggle="collapse"
+                      data-target="#fact_content3">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </span>
+                <span>fact name</span>
+                <div id="fact_content3" class="collapse fact">Mauris commodo sed lacus sed vehicula. Quisque metus dui, maximus nec neque quis, cursus fringilla enim. Nullam fermentum enim nibh, sit amet tempus neque tincidunt et. Maecenas lectus enim, aliquam ac elit et, imperdiet accumsan libero. Suspendisse eu mi a elit volutpat posuere. Nunc non dui et purus fringilla elementum ut auctor urna. Etiam molestie ligula et velit gravida, eleifend egestas sapien tristique. Duis tempus justo est, ut tempor lectus malesuada quis.</div>
             </li>
         </ul>
         </div>
