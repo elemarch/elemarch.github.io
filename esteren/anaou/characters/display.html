@@ -19,7 +19,7 @@
 			<a class="navbar-brand" href="../">Esteren Anaou</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Déaglàn</a></li>
+			<li class="active"><a href="#" class="var var-name%">name</a></li>
 			<li><a href="../personnages.html">Personnages</a></li>
 			<li><a href="../lieux.html">Lieux</a></li>
 		</ul>
@@ -29,14 +29,14 @@
     <div class="col-md-3" id="identity_panel">
         <div id="photo"></div>
         <div id="resume">
-            <h2>Name</h2>
-            <h3>Title of character</h3>
+            <h2 class="var var-name%">Name</h2>
+            <h3 class="var var-title%">Title of character</h3>
             <img src="../../assets/pictures/deaglan.png">
             <h3>Petits détails</h3>
             <ul class="facts_list">
                 <li>
                     <span class="mini_fact_name">Vu en dernier</span>
-                    <div class="fact"> Le 00 mois 000 à Sanctuaire, port-Ouestern</div>
+                    <div class="fact "> Le 00 mois 000 à Sanctuaire, port-Ouestern</div>
                 </li>
                 <li>
                     <span class="mini_fact_name">Habite à</span>
@@ -49,19 +49,19 @@
         <div class="row">
             <div class="col-md-6 description physical">
                 <h3>Description physique</h3>
-                <p>
+                <p class="var var-physical%">
                 Etiam id magna et ligula ultricies dapibus et sed lectus. Suspendisse ac erat dignissim, tempor ex ut, tincidunt enim. In hac habitasse platea dictumst. Nam tempus tortor a mollis laoreet. Etiam vestibulum ultrices accumsan. In condimentum nisi eu nisl tempus tincidunt. In in mauris sagittis, facilisis dolor eu, vestibulum metus. Phasellus sagittis dignissim justo, nec vulputate lectus malesuada ac. Proin nulla dui, maximus vel nisl eu, suscipit ornare dui. Quisque id sodales massa, a pharetra sem. Vivamus blandit urna nunc. Proin hendrerit erat quis tortor consequat, eu lobortis libero viverra.
                 </p>
             </div>
             <div class="col-md-6 description mental">
                 <h3>Description morale</h3>
-                <p>
+                <p class="var var-mental%">
                 Quisque sed est a mauris feugiat laoreet. Praesent lacinia suscipit metus, non auctor mauris ullamcorper ut. Aenean tempus neque sed lorem semper, quis commodo sapien consectetur. Donec vel lectus viverra, pharetra dolor sed, commodo lectus. Phasellus ut eleifend mi. Pellentesque posuere quam eu aliquam luctus. Ut eget sollicitudin tellus. Proin vestibulum vel augue a sollicitudin. Etiam porta nisi quis ligula fringilla, sit amet tristique tellus facilisis. Integer lacinia, sapien eu pharetra semper, sem neque feugiat diam, nec dignissim mi lacus ut nunc.
                 </p>
             </div>
         </div>
         <h3>Détails connus</h3>
-        <ul class="row facts_list">
+        <ul class="row facts_list" id="facts">
             <li>
                 <span type="button"
                       class="btn btn-default btn-xs"
@@ -95,5 +95,10 @@
         </ul>
 	</div>
 </div>
+<script src="../data/characters.js"></script>
+<script src="../data/access.js"></script>
+<script>
+    fillVars(characters);
+</script>
 </body>
 </html>
