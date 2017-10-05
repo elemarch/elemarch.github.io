@@ -20,8 +20,8 @@
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="#" class="var var-name%">name</a></li>
-            <li><a href="#?t=characters">Personnages</a></li>
-            <li><a href="#?t=places">Lieux</a></li>
+            <li><a href="index.html?t=characters">Personnages</a></li>
+            <li><a href="index.html?t=places">Lieux</a></li>
         </ul>
     </div>
 </nav>
@@ -34,7 +34,13 @@
 <script src="templates/characters.js"></script>
 <script>
     var page = getParameterByName('t');
-    var template = 'template_content_' + page;
+	var template;
+	var entity = getParameterByName('get');
+	if (entity) {
+		template = 'template_content_' + page;
+    } else {
+    	template = 'template_list';
+    }
 
     var content = document.getElementById("placeholder");
     template = eval(template);
@@ -44,9 +50,15 @@
     }
     content.innerHTML = concat_template;
 
-    if (getParameterByName('get')) {
+    if (entity) {
         fillVars(eval(page));
-    }
+        entity_facts = generateFacts(entity);
+		var fact_place = document.getElementById("facts");
+		if (fact_place) {
+			fact_place.innerHTML = entity_facts;
+        }
+
+	}
 </script>
 <script>
 </script>

@@ -1,13 +1,11 @@
 var template_content_characters = [];
 
-
-
 template_content_characters.push('<div class="col-md-3" id="identity_panel">');
 template_content_characters.push('        <div id="photo"></div>');
 template_content_characters.push('        <div id="resume">');
-template_content_characters.push('            <h2 class="var var-name%">Name</h2>');
-template_content_characters.push('            <h3 class="var var-title%">Title of character</h3>');
-template_content_characters.push('            <img src="../../assets/pictures/deaglan.png">');
+template_content_characters.push('            <h2 class="var var-name%"></h2>');
+template_content_characters.push('            <h3 class="var var-title%"></h3>');
+template_content_characters.push('            <img id="picture" src="">');
 template_content_characters.push('            <h3>Petits détails</h3>');
 template_content_characters.push('            <ul class="facts_list">');
 template_content_characters.push('                <li>');
@@ -25,15 +23,11 @@ template_content_characters.push('    <div class="col-md-9" id="information_pane
 template_content_characters.push('        <div class="row">');
 template_content_characters.push('            <div class="col-md-6 description physical">');
 template_content_characters.push('                <h3>Description physique</h3>');
-template_content_characters.push('                <p class="var var-physical%">');
-template_content_characters.push('                Etiam id magna et ligula ultricies dapibus et sed lectus. ')
-template_content_characters.push('                </p>');
+template_content_characters.push('                <p class="var var-physical%"></p>');
 template_content_characters.push('            </div>');
 template_content_characters.push('            <div class="col-md-6 description mental">');
 template_content_characters.push('                <h3>Description morale</h3>');
-template_content_characters.push('                <p class="var var-mental%">');
-template_content_characters.push('                Quisque sed est a mauris feugiat laoreet. Praesent lacinia suscipit ');
-template_content_characters.push('                </p>');
+template_content_characters.push('                <p class="var var-mental%"></p>');
 template_content_characters.push('            </div>');
 template_content_characters.push('        </div>');
 template_content_characters.push('        <h3>Détails connus</h3>');

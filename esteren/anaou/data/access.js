@@ -37,3 +37,25 @@ function fillVars(table) {
         list[i].innerHTML = entity[varname];
     }
 }
+
+function generateFacts(slug) {
+    var factList = "";
+    var i = 0;
+    facts.forEach(function (fact) {
+        if (fact.characters.includes(slug) || fact.places.includes(slug)) {
+			var hash = i.toString(16);
+            factList += "<li>";
+			factList += '<span type="button" ' +
+                'class="btn btn-default btn-xs" ' +
+                'data-toggle="collapse" ' +
+                'data-target="#' + hash + '">' +
+                '<i class="fa fa-plus" aria-hidden="true"></i>' +
+                '</span>';
+			factList += '<span>'+ fact.title + '</span>';
+			factList += '<div id="' + hash + '" class="collapse fact">' + fact.body + '</div>';
+			factList += "</li>";
+			i++;
+        }
+	});
+    return factList;
+}
