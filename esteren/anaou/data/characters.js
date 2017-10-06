@@ -14,7 +14,15 @@ var characters = [];
 characters["deaglan"] = {
     name: "Déaglàn",
     title: "Démorthèn de Port-Ouestern",
-    $home: "sanctuaire",
+    home: "sanctuaire",
     physical: "Un homme d'une trentaine d'année, les cheveux bruns et longs.",
     mental: "Il paraît tout le temps fatigué."
+};
+
+characters["remi"] = {
+    name: "Rémi",
+    title: "ou Bob",
+    home: "Bibliothèque de Brann",
+	physical: "-",
+	mental: "-"
 };

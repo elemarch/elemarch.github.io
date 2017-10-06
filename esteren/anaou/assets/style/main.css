@@ -46,6 +46,23 @@ div.fact {
     margin-bottom: 10px;
 }
 
+ul.tag_list {
+    margin: -10px;
+    padding-left: 10px;
+}
+
+ul.tag_list a li {
+    display: inline-block;
+    border: none;
+    background-color: #c1bdac;
+    padding: 0 6px 3px 6px;
+    margin-right: 5px;
+    color: black;
+}
+ul.tag_list a li:hover {
+    background-color: #d5d1bf;
+}
+
 img {
     width: 100%;
 }

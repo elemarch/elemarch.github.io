@@ -52,7 +52,17 @@ function generateFacts(slug) {
                 '<i class="fa fa-plus" aria-hidden="true"></i>' +
                 '</span>';
 			factList += '<span>'+ fact.title + '</span>';
-			factList += '<div id="' + hash + '" class="collapse fact">' + fact.body + '</div>';
+			factList += '<div id="' + hash + '" class="collapse fact"><p>' + fact.body + '</p>';
+			factList += '<ul class="tag_list">';
+			fact.characters.forEach(function (c) {
+				var chara = find(characters, c);
+				factList += '<a href="index.html?t=characters&get=' + c.toString() + '"><li>' + chara.name + '</li></a>';
+			});
+			fact.places.forEach(function (p) {
+				var place = find(places, p);
+				factList += '<a href="index.html?t=places&get=' + p.toString() + '"><li>' + place.name + '</li></a>';
+			});
+            factList += '</ul></div>';
 			factList += "</li>";
 			i++;
         }
