@@ -69,3 +69,13 @@ function generateFacts(slug) {
 	});
     return factList;
 }
+
+function cascadePlace(slug) {
+    var place;
+    var place_cascade = [];
+    while (slug) {
+        place = find(places, slug);
+        slug = place.is_in;
+
+    }
+}
