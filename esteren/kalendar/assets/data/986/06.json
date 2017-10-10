@@ -1,0 +1,18 @@
+{
+  "1": [
+    {
+      "type": "travel",
+      "text": "Arrivée à Port-Ouestern",
+      "places": ["port-ouestern"],
+      "characters": [""],
+      "hour": "15h00"
+    },
+    {
+      "type": "meetong",
+      "text": "Rencontre avec Déaglàn",
+      "places": ["sanctuaire"],
+      "characters": ["deaglan"],
+      "hour": "17h00"
+    }
+  ]
+}
